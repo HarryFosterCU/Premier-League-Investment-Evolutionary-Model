@@ -23,8 +23,7 @@ A Moran Process models evolution in a fixed population by the following process:
 2) Each $v_i \in \textbf{v}$ represents the number of individuals in the population following strategy i
 3) Each strategy i has a fitness depending on the current population, given by some function $F_i(\textbf{v})$
 4) In each generation, one individual in the population is selected for duplication with a probabilitiy proportional to it's fitness. 
-This value is calculated by: $\newline$ 
-$P_{selection}(i, \textbf{v}) = \frac{v_i F_i(\textbf{v})}{\sum_{j=1}^n (v_j F_j(\textbf{v}))}$
+This value is calculated by: $\newline P_{selection}(i, \textbf{v}) = \frac{v_i F_i(\textbf{v})}{\sum_{j=1}^n (v_j F_j(\textbf{v}))}$
 5) In each generation, one individual is selected to be removed with probabilitiy proportional to it's presence in the population, given by $\newline$
 $P_{Removal}(i, \textbf{v}) = \frac{v_i}{\sum_{j=1}^n (v_j)}$
 6) One individual may mutate, with a probability given by the values in a predetermined mutation matrix M.
@@ -32,13 +31,13 @@ $P_{Removal}(i, \textbf{v}) = \frac{v_i}{\sum_{j=1}^n (v_j)}$
 ## How to use the code
 - The code can be altered to simulate the model differently.
 - The payoff matrix "A" gives the average points. It can be updated to alter the effect that spending has on games. As standard it is set to
-$\begin{bmatrix}
+$\begin{pmatrix}
 1.6 & 1.3 & 1.0 & 0.8 & 0.5 \\
 1.9 & 1.6 & 1.3 & 1.0 & 0.8 \\
 2.1 & 1.9 & 1.6 & 1.3 & 1.0 \\
 2.3 & 2.1 & 1.9 & 1.6 & 1.3 \\
 2.5 & 2.3 & 2.1 & 1.8 & 1.5
-\end{bmatrix}$
+\end{pmatrix}$
 
 The lower down the rows, the more you spend. The further along the collums, the more your opponent has spent.
 
