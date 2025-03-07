@@ -23,7 +23,7 @@ A Moran Process models evolution in a fixed population by the following process:
 2) Each $v_i \in \textbf{v}$ represents the number of individuals in the population following strategy i
 3) Each strategy i has a fitness depending on the current population, given by some function $F_i(\textbf{v})$
 4) In each generation, one individual in the population is selected for duplication with a probabilitiy proportional to it's fitness. 
-This value is calculated by: $\newline$
+This value is calculated by: $\newline$ 
 $P_{selection}(i, \textbf{v}) = \frac{v_i F_i(\textbf{v})}{\sum_{j=1}^n (v_j F_j(\textbf{v}))}$
 5) In each generation, one individual is selected to be removed with probabilitiy proportional to it's presence in the population, given by $\newline$
 $P_{Removal}(i, \textbf{v}) = \frac{v_i}{\sum_{j=1}^n (v_j)}$
