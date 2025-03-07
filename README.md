@@ -32,10 +32,10 @@ $P_{Removal}(i, \textbf{v}) = \frac{v_i}{\sum_{j=1}^n (v_j)}$
 - The code can be altered to simulate the model differently.
 - The payoff matrix "A" gives the average points. It can be updated to alter the effect that spending has on games. As standard it is set to
 $\begin{pmatrix}
-1.6 & 1.3 & 1.0 & 0.8 & 0.5 \\
-1.9 & 1.6 & 1.3 & 1.0 & 0.8 \\
-2.1 & 1.9 & 1.6 & 1.3 & 1.0 \\
-2.3 & 2.1 & 1.9 & 1.6 & 1.3 \\
+1.6 & 1.3 & 1.0 & 0.8 & 0.5 \\\
+1.9 & 1.6 & 1.3 & 1.0 & 0.8 \\\
+2.1 & 1.9 & 1.6 & 1.3 & 1.0 \\\
+2.3 & 2.1 & 1.9 & 1.6 & 1.3 \\\
 2.5 & 2.3 & 2.1 & 1.8 & 1.5
 \end{pmatrix}$
 
