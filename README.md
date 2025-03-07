@@ -32,21 +32,22 @@ $P_{Removal}(i, \textbf{v}) = \frac{v_i}{\sum_{j=1}^n (v_j)}$
 ## How to use the code
 - The code can be altered to simulate the model differently.
 - The payoff matrix "A" gives the average points. It can be updated to alter the effect that spending has on games. As standard it is set to
-\begin{bmatrix}
+$\begin{bmatrix}
 1.6 & 1.3 & 1.0 & 0.8 & 0.5 \\
 1.9 & 1.6 & 1.3 & 1.0 & 0.8 \\
 2.1 & 1.9 & 1.6 & 1.3 & 1.0 \\
 2.3 & 2.1 & 1.9 & 1.6 & 1.3 \\
 2.5 & 2.3 & 2.1 & 1.8 & 1.5
-\end{bmatrix}
+\end{bmatrix}$
 
 The lower down the rows, the more you spend. The further along the collums, the more your opponent has spent.
 
-- The Cost array gives the average amounts spent per year in the different spending brackets. As default it is set to [15.91, 37.1, 63.47, 110.47, 209.89]
+- The Cost array gives the average amounts spent per year in the different spending brackets. As default it is set to $\newline$[15.91, 37.1, 63.47, 110.47, 209.89]
 
 - Runs is the total generations (seasons) we run the simulation for. Default set to 500 as to produce nice graphs which reach valid conclusions. 100, 1000, and 5000 are other standard values
 
 - Get_Profit returns the profit as calculated by the regression model $P(i,\textbf{v}) = -(1059.558838 + i) + 51.712382X_i(\textbf{v}) - 0.953450X_i(\textbf{v})^2 + 0.009183X_i(\textbf{v})^3 - 0.000034X_i(\textbf{v})^4$, for population $\textbf{v}$ when spending £i. The Fitness of a strategy is given by $F_{i}(\textbf{v}) = e^{0.04 P_{i}(\textbf{v})}$ and is calculated in the Get_Fitness function
 
-- Mut_Matrix gives the base probabilities of certain mutations. The areas with "1" will be replaced with $p_{i,j}$ = $0.005(1 - e^{\frac{F_j(\textbf{v})}{F_j(\textbf{v})}$) for (i,j) such that ${F_i(\textbf{v})} < F_j(\textbf{v})$
+- Mut_Matrix gives the base probabilities of certain mutations. The areas with "1" will be replaced with $\newline$
+$p_{i,j}$ = $0.005(1 - e^{\frac{F_j(\textbf{v})}{F_j(\textbf{v})}}$) for (i,j) such that ${F_i(\textbf{v})} < F_j(\textbf{v})$
 
